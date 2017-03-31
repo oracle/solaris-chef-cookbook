@@ -1,5 +1,5 @@
-# Name of Your Project
-Short description of your project.
+# Chef Cookbooks For Oracle Solaris
+Chef Cookbooks to automate administration of Oracle Solaris.
 
 # Getting started
 Provide developer level instructions:
