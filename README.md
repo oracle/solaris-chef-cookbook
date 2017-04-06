@@ -2,7 +2,7 @@
 Chef Cookbooks to automate administration of Oracle Solaris.
 
 # Chef Cookbboks Overview
-beadm, Solaris Boot Environments management
+   - beadm, Solaris Boot Environments management
 
 # Getting Started
    - Oracle Solaris 11.3 release
