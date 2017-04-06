@@ -6,9 +6,9 @@ beadm, Solaris Boot Environments management
 
 # Getting Started
    - Oracle Solaris 11.3 release
-   - [chef-client](https://downloads.chef.io/chef/12.19.36#solaris2), can be installed
+   - [Chef Client](https://downloads.chef.io/chef/12.19.36#solaris2), can be installed
      manually or via Omnitruck installer
-   - Chef Server to push cookbooks to client nodes (with Chef-client installed)
+   - Chef Server to push cookbooks to client nodes (with Chef Client installed)
    - Make sure to pass appropriate arguments In your cookbook/reciepe
    - Refere to documentation of individual cookbooks for various options
      and arguments supported by each cookbook.
@@ -21,24 +21,6 @@ run the cookbooks by enabling it in .kitchen.yml.
 
 # Limitations
 The Chef cookbooks were created for use in Oracle Solaris 11.3 release only.
-
-# Getting started
-Provide developer level instructions:
-
-   - What are the software prerequisites (e.g.: requires Maven version X, WebLogic version Y, etc)
-   - What are the necessary services, in case of being a sample for Oracle Cloud
-   - Instructions for compiling/testing/deploying/running if applied
-   - Short documentation, when sufficient. 
-   - Link to documentation, if applicable
-   - Link to tutorials that use this software, if applicable
-     - You must replicate a simplified/short version of step-by-step instructions given in the tutorial
-   - Links to OTN Community Platform related topics are acceptable
-
-# Installation (or Deployment)
-If this is an installable/deployable software, provide step-by-step instructions.
-
-# Usage (or Examples)
-Provide instructions on how to use the software of this project.
 
 # Contributing
 This project is an open source project. See [CONTRIBUTING](./CONTRIBUTING.md) for details.
