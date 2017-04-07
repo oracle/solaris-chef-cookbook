@@ -9,10 +9,10 @@ Chef Cookbooks to automate administration of Oracle Solaris.
    - [Chef Client](https://downloads.chef.io/chef/12.19.36#solaris2), can be installed
      manually or via Omnitruck installer
    - Chef Server to push cookbooks to client nodes (with Chef Client installed)
-   - Make sure to pass appropriate arguments In your cookbook/reciepe
-   - Refere to documentation of individual cookbooks for various options
-     and arguments supported by each cookbook.
-   - No additional setup or configuration is required.
+   - Make sure to pass appropriate arguments in your cookbook/recipe
+   - Refer to documentation of individual cookbooks for various options
+     and arguments supported by each cookbook
+   - No additional setup or configuration is required
 
 # Testing Cookbooks With Chef Development Kit (ChefDK)
 
