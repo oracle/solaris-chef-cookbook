@@ -1,7 +1,7 @@
 # Chef Cookbooks For Oracle Solaris
 Chef Cookbooks to automate administration of Oracle Solaris.
 
-# Chef Cookbboks Overview
+# Chef Cookbooks Overview
    - beadm, Solaris Boot Environments management
 
 # Getting Started
