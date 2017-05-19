@@ -55,43 +55,52 @@ Usage
 -----
 #### beadm::default
 
-
-##Creating a newbe
-
+#### Create a newbe
+```ruby
 beadm 'newbe' do
         action :create
 end
+```
 
-
-##renaming a BE
+#### Rename a BE
+```ruby
 beadm 'testbe' do
         action :rename
 	new_be "testing"
 end
+```
 
-##Setting ZFS options while creation of BE
+#### Set ZFS options when creating a BE
+```ruby
 beadm 'newbe2' do
   options ({
              'recordsize' => '128K', 'compression' => 'on'
            })
   action :create
 end
+```
 
-##Mounting of BE
+#### Mount a BE
+```ruby
 beadm 'newbe2' do
   mountpoint "/mnt"
   action :mount
 end
+```
 
-##Mounting of BE
+#### Unmount a BE
+```ruby
 beadm 'newbe2' do
   action :umount
 end
+```
 
-##Pattern based destroy of BE
+#### Pattern based destroy of a BE
+```ruby
 beadm 'newbe*' do
 	action :destroy_pattern
 end
+```
 
 Contributing
 ------------
