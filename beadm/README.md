@@ -98,7 +98,7 @@ end
 #### Pattern based destroy of a BE
 ```ruby
 beadm 'newbe*' do
-	action :destroy_pattern
+  action :destroy_pattern
 end
 ```
 
