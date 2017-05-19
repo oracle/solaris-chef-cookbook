@@ -115,7 +115,7 @@ Process for contributing.
 
 License and Authors
 -------------------
-- Author:: Pradhap Devarajan ([pradhap.devarajan@oracle.com](mailto:pradhap.devarajan@oracle.com))
+- Author::Pradhap Devarajan ([pradhap.devarajan@oracle.com](mailto:pradhap.devarajan@oracle.com))
 
 ```text
 Copyright (c) 2017, Oracle and/or its affiliates. All rights reserved.
