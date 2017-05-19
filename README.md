@@ -16,11 +16,40 @@ Chef Cookbooks to automate administration of Oracle Solaris.
 
 # Testing Cookbooks With Chef Development Kit (ChefDK)
 
-If you are testing cookbooks with ChefDK, upload the cookbooks to directory and
-run the cookbooks by enabling it in .kitchen.yml.
+If you are testing cookbooks with ChefDK:
+   - Download ChefDK from https://downloads.chef.io/chefdk
+   - Prepare Solaris vagrant image follow https://www.vagrantup.com/docs/boxes/base.html
+   - Upload the cookbooks to ~/cookbooks directory 
+   - Run the cookbooks by enabling it in .kitchen.yml.
+
+By default ~/cookbooks directory is used. If you use a non-default directory update
+.kitchen.yml with add 'cookbook_path: "test/cookbooks"' in suites section.
+
+```text
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+  no_proxy: localhost,127.0.0.1
+
+verifier:
+  name: busser
+
+network:
+      - ["private_network"]
+      - ["private_network"]
+
+platforms:
+   - name: solaris
+
+suites:
+  - name: default
+    run_list:
+      - recipe[deploy-cookbook::default]
+```
 
 # Limitations
-The Chef cookbooks were created for use in Oracle Solaris 11.3 release only.
+The Chef cookbooks were created for use in Oracle Solaris 11.3 release.
 
 # Contributing
 This project is an open source project. See [CONTRIBUTING](./CONTRIBUTING.md) for details.
