@@ -42,6 +42,12 @@ Beadm cookbook attributes.
     <td><tt></tt></td>
   </tr>
   <tr>
+    <td><tt>activate</tt></td>
+    <td>boolean</td>
+    <td>activate BE</td>
+    <td><tt>false</tt></td>
+  </tr>
+  <tr>
     <td><tt>options</tt></td>
     <td>Hash</td>
     <td>ZFS properties</td>
