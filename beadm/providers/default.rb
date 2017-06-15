@@ -17,7 +17,7 @@
 include Chef::Mixin::ShellOut
 
 def load_current_resource
-  @beadm = Chef::Resource::Beadm.new(new_resource.name)
+  @beadm = new_resource.class.new(new_resource.name)
   @beadm.name(new_resource.name)
   @beadm.options(new_resource.options)
   @beadm.mountpoint(new_resource.mountpoint)
@@ -173,4 +173,16 @@ end
 def list?
   Chef::Log.info("Checking beadm list -H")
   shell_out("beadm list -H")
+end
+
+def already_mounted?
+  @beadm.current_props(current_props?)  
+  current_be_props = @beadm.current_props[@beadm.name]
+  tmp = current_be_props.split(';');
+  flag = false
+  if tmp[3] != ""
+    Chef::Log.info("BE already mounted in #{tmp[3]}")
+    flag = true
+  end
+  flag
 end
