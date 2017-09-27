@@ -1,13 +1,13 @@
 SVCCFG Cookbook
 ==============
  
- 	   The svccfg command manipulates data in the service configuration repository.
- 	   svccfg can be invoked interactively, with an individual  subcommand, or by 
- 	   specifying a command file that contains a series of subcommands.
+      The svccfg command manipulates data in the service configuration repository.
+      svccfg can be invoked interactively, with an individual  subcommand, or by 
+      specifying a command file that contains a series of subcommands.
 
-       Changes made to an existing service in the repository typically do  not
-       take  effect  for that service until the next time the service instance
-       is refreshed.
+      Changes made to an existing service in the repository typically do  not
+      take  effect  for that service until the next time the service instance
+      is refreshed.
  
 Requirements
 ============
@@ -36,9 +36,9 @@ Svccfg Cookbook attributes.
     <td><tt></tt></td>
   </tr>
    <tr>
-    <td><tt>Type</tt></td>
+    <td><tt>file_name</tt></td>
     <td>String</td>
-    <td>DataType</td> 
+    <td>name of the file</td> 
     <td></td>
   </tr>
   <tr>
@@ -48,21 +48,65 @@ Svccfg Cookbook attributes.
     <td><tt>Fault Management Resource Identifier</tt></td>
   </tr>
   <tr>
-    <td><tt>method_name</tt></td>
+    <td><tt>instance</tt></td>
     <td>String</td>
-    <td>name</td> 
+    <td>instance</td> 
+    <td></td>
+  </tr>
+<tr>
+    <td><tt>site_profile</tt></td>
+    <td>String</td>
+    <td>site profile</td> 
+    <td></td>
+  </tr>
+<tr>
+    <td><tt>layers</tt></td>
+    <td>Boolean</td>
+    <td></td> 
+    <td>false</td>
+  </tr>
+  <tr>
+    <td><tt>masked</tt></td>
+    <td>Boolean</td>
+    <td></td> 
+    <td>false</td>
+  </tr>
+  <tr>
+    <td><tt>new_value</tt></td>
+    <td>string</td>
+    <td>new value</td> 
     <td></td>
   </tr>
   <tr>
+    <td><tt>new_value</tt></td>
+    <td>string</td>
+    <td>new value</td> 
+    <td></td>
+  </tr>
+  <tr>
+    <td><tt>globpattern</tt></td>
+    <td>string</td>
+    <td>globpattern</td> 
+    <td></td>
+  </tr>
+<tr>
+    <td><tt>environment</tt></td>
+    <td>string</td>
+    <td>environment</td> 
+    <td></td>
+  </tr>
+<tr>
     <td><tt>options</tt></td>
     <td>Hash</td>
     <td>Key, Value</td> 
     <td>Nil</td>
-  </tr>
+</tr>
 </table>
+
 
 Usage
 =====
+
 To Create the File
 ------------------
 

@@ -23,13 +23,50 @@ Attributes
 
 pkg_facet Cookbook attributes.
 
-  <tr>
+<table border="1" bgcolor="#8080cc">
+ <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+<tr>
     <td><tt>name</tt></td>
     <td>String</td>
     <td>name</td>
     <td><tt></tt></td>
   </tr>
-  <tr>
+<td><tt>facet_value</tt></td>
+    <td>Boolean</td>
+    <td></td>
+    <td><tt>false</tt></td>
+  </tr>
+
+<td><tt>mediation</tt></td>
+    <td>Boolean</td>
+    <td></td>
+    <td><tt>false</tt></td>
+  </tr>
+
+<td><tt>request_operation</tt></td>
+    <td>String</td>
+    <td></td>
+    <td><tt>RequestOperation</tt></td>
+  </tr>
+
+<td><tt>accept</tt></td>
+    <td>Boolean</td>
+    <td></td>
+    <td><tt>false</tt></td>
+  </tr>
+
+<td><tt>operation</tt></td>
+    <td>String</td>
+    <td></td>
+    <td><tt>operation</tt></td>
+  </tr>
+
+ <tr>
     <td><tt>version</tt></td>
     <td>String</td>
     <td>version</td>
@@ -47,6 +84,19 @@ pkg_facet Cookbook attributes.
     <td></td> 
     <td><tt>false</tt></td>
   </tr>
+   <tr>
+    <td><tt>no_refresh</tt></td>
+    <td>Boolean</td>
+    <td></td> 
+    <td><tt>false</tt></td>
+  </tr> 
+
+ <td><tt>require_backup_be</tt></td>
+    <td>Boolean</td>
+    <td></td> 
+    <td><tt>false</tt></td>
+  </tr> 
+
   <tr>
     <td><tt>request_operation</tt></td>
     <td>String</td>
@@ -65,7 +115,22 @@ pkg_facet Cookbook attributes.
     <td>Time</td> 
     <td><tt></tt></td>
   </tr>
+
+  <tr>
+    <td><tt>sync_actuators_timeout</tt></td>
+    <td>Integer</td>
+    <td>Time</td> 
+    <td><tt></tt></td>
+  </tr>
+
+<tr>
+    <td><tt>path_uri</tt></td>
+    <td>Boolean</td>
+    <td></td> 
+    <td><tt>false</tt></td>
+  </tr>
 </table>
+  
 
 Usage
 =====
@@ -121,7 +186,7 @@ pkg_facet "facet.version-lock.system/library/gcc/gcc-c-runtime" do
 end
 
 pkg_facet "facet.version-lock.system/library/gcc/gcc-c-runtime" do
-  be_name true  
+  be_name true 
   bname  "gust1"
   action :change_facet
 end
@@ -151,13 +216,13 @@ end
 
 pkg_facet "facet.version-lock.system/library/gcc/gcc-c-runtime" do
   facet_value false
-  backup_name "oracle"  
+  backup_name "oracle" 
   action :change_facet
 end
 
 pkg_facet "facet.version-lock.system/library/gcc/gcc-c-runtime" do
   facet_value true
-  path_or_uri "http://ipkg.uk.oracle.com/solaris11/support/"   
+  path_or_uri "http://ipkg.uk.oracle.com/solaris11/support/" 
   action :change_facet
 end
 end

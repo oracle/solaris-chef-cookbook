@@ -1,19 +1,17 @@
-
-
 pkg_mediator
 ============
 
-		Multiple versions of an application or tool in the same  image. If the
-		different versions of the application are delivered as part of the same
-		mediation, then  one  can easily reset the  version that is the default
-		or preferred version.
+	Multiple versions of an application or tool in the same  image. If the
+	different versions of the application are delivered as part of the same
+	mediation, then  one  can easily reset the  version that is the default
+	or preferred version.
 		
-		A mediation is a set of links to different implementations of an application,
-		where each of the links has the same mediator name and the same link path but
-		different target link paths.
+	A mediation is a set of links to different implementations of an application,
+	where each of the links has the same mediator name and the same link path but
+	different target link paths.
 		
-		Example java, python and gcc etc can have multiple versions can	be delivered 
-		as part of the image. 
+	Example java, python and gcc etc can have multiple versions can	be delivered 
+	as part of the image. 
 
 
 Requirements
@@ -64,12 +62,6 @@ pkg_mediator Cookbook attributes.
     <td>Boolean</td>
     <td></td> 
     <td>false</td>
-  </tr>
-  <tr>
-    <td><tt>timeout</tt></td>
-    <td>Integer</td>
-    <td>Time</td> 
-    <td><tt></tt></td>
   </tr>
 </table>
 
