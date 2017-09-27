@@ -14,46 +14,6 @@
 # limitations under the License.
 
 
-pkg_mediator "java" do
-  version "1.8"
-  action :mediator
-end
-
-
-pkg_mediator "java" do
-  version "1.10"
-  no_be_activate true
-  action :mediator
-end
-
-pkg_mediator "xxx" do
-  version "1.15"
-  no_backup_be true
-  action :mediator
-end
-
-
-pkg_mediator "java" do
-    version "1.9"
-  deny_new_be true
-  action :mediator
-end
-
-
-pkg_mediator "java" do
-  version "1.8"
-  require_new_be true
-  action :mediator
-end
-
-
-pkg_mediator "java" do
-  version "1.8"
-  be_name true
-  bname "testing"
-  action :mediator
-end
-
 
 
 
