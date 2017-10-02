@@ -1,14 +1,28 @@
 pkg_facet
 =========
 
-       pkg is  the  retrieval  client  for the  Image  Packaging System. With a
-       valid configuration, pkg can be invoked to create locations for packages
-       to  be  installed, called images, and install packages into those images.
-       
-       Packages are published by publishers, who can make their packages available
-       at one or more repositories, or in package archives. pkg retrieves packages 
-       from a publisher's repository or package archives and installs the packages 
-       into an image.
+       Facets are treated as boolean values by package clients: Facets can be
+       set  only to true (enabled) or false (disabled) in the image. By
+       default, all facets starting with 'facet.debug.' or 'facet.optional.'
+       are  considered to be set to false in the image; all others are consid-
+       ered to be set to true in the image.
+
+       Facets can be either set locally within an image using the pkg change-
+       facet command or inherited from a parent image. For example, a non-
+       global zone can inherit a facet from the global zone. Inherited facets
+       are evaluated before, and take priority over, any locally set facets.
+       If the same facet is both inherited and locally set, the inherited
+       facet  value  masks the locally set value. Masked facets have no effect
+       on facet evaluation and package actions. Facet changes made by using
+       the pkg change-facet command only affect locally set facets. Inherited
+       facets can only be changed by making the change in the parent image. By
+       default, the pkg facet command does not display masked facets.
+
+       The value of a facet tag on an action can be set to all or true to con-
+       trol how clients filter faceted actions. All values other than all or
+       true have undefined behavior. See below for a description of the condi-
+       tions that must exist in the image to install an action that has facet
+       tags.
 
 
 Requirements
@@ -228,18 +242,16 @@ end
 end
 ```
 
-
-   
-
 Contributing
-============
+------------
+Process for contributing.
 
-    * Fork the repository on Mercurial
-    * Create a named feature branch 
-    * Write your Changes
-    * Write tests for your change
-    * Submit a pull Request Using Mercurial
- 
+1. Fork the repository on Github
+2. Create a named feature branch (like `add_component_x`)
+3. Write your change
+4. Write tests for your change (if applicable)
+5. Run the tests, ensuring they all pass
+6. Submit a Pull Request using Github
 
  License and Authors
  -------------------
